@@ -4,4 +4,9 @@ class Wish < ActiveRecord::Base
   #----------Validations-----------#
   validates :name, :length => {:maximum => 80}
   validates :name, :presence => true
+
+  #----------Associations-----------#
+  has_many :wish_assistants
+  has_many :assistants, :through => :wish_assistants
+
 end
