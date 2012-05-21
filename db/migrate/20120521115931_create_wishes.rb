@@ -1,8 +1,8 @@
 class CreateWishes < ActiveRecord::Migration
   def change
     create_table :wishes do |t|
-      t.string :name
-      t.integer :owner_id
+      t.string :name , :null => false
+      t.integer :owner_id, :null => false
 
       t.timestamps
     end
