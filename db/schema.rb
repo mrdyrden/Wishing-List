@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(:version => 20120521133359) do
 
   create_table "hobbies", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "user_hobbies", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "hobby_id"
+    t.integer  "user_id",    :null => false
+    t.integer  "hobby_id",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -33,21 +33,23 @@ ActiveRecord::Schema.define(:version => 20120521133359) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
+    t.string   "name",       :null => false
+    t.string   "email",      :null => false
+    t.string   "password",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "wish_assitants", :force => true do |t|
-    t.integer  "wish_id"
-    t.integer  "assistant_id"
+    t.integer  "wish_id",      :null => false
+    t.integer  "assistant_id", :null => false
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
 
   create_table "wishes", :force => true do |t|
-    t.string   "name"
-    t.integer  "owner_id"
+    t.string   "name",       :null => false
+    t.integer  "owner_id",   :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
