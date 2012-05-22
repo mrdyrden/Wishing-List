@@ -1,5 +1,7 @@
 WishingList::Application.routes.draw do
   resources :wishes
+  match ':action' => 'main#:action'
+  #root :to => 'main'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

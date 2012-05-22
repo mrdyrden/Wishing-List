@@ -6,6 +6,7 @@ class Wish < ActiveRecord::Base
   validates :name, :presence => true
 
   #----------Associations-----------#
+  belongs_to :user
   has_many :wish_assistants
   has_many :assistants, :through => :wish_assistants
 

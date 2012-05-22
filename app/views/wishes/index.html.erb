@@ -12,7 +12,7 @@
 <% @wishes.each do |wish| %>
   <tr>
     <td><%= wish.name %></td>
-    <td><%= wish.owner_id %></td>
+    <td><%= wish.user_id %></td>
     <td><%= link_to 'Show', wish %></td>
     <td><%= link_to 'Edit', edit_wish_path(wish) %></td>
     <td><%= link_to 'Destroy', wish, :confirm => 'Are you sure?', :method => :delete %></td>
