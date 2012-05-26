@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120521133359) do
+ActiveRecord::Schema.define(:version => 20120522140101) do
 
   create_table "hobbies", :force => true do |t|
     t.string   "name",       :null => false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20120521133359) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
   create_table "wish_assitants", :force => true do |t|
     t.integer  "wish_id",      :null => false

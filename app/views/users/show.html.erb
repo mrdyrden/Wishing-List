@@ -1,0 +1,8 @@
+<header> 
+  <p><%= @user.name %></p> 
+</header>
+<ul>
+<% @user_wishes.each do |wish| %>
+<li> <%= wish.name %> </li>
+<% end %>
+</ul>

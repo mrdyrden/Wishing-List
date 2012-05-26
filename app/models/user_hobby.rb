@@ -10,3 +10,14 @@ class UserHobby < ActiveRecord::Base
   belongs_to :hobby
 
 end
+# == Schema Information
+#
+# Table name: user_hobbies
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer         not null
+#  hobby_id   :integer         not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+

@@ -7,3 +7,14 @@ one:
 two:
   user_id: 1
   hobby_id: 1
+# == Schema Information
+#
+# Table name: user_hobbies
+#
+#  id         :integer         not null, primary key
+#  user_id    :integer         not null
+#  hobby_id   :integer         not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+

@@ -1,6 +1,16 @@
 WishingList::Application.routes.draw do
+  get "sessions/new"
+
   resources :wishes
-  match ':action' => 'main#:action'
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  match '/signin', :to => 'sessions#new' 
+  #match '/signout', :to => 'sessions#destroy'
+
+  #match '/signup', :to => 'users#new'
+  #match ':action' => 'main#:action'
+
+
   #root :to => 'main'
 
   # The priority is based upon order of creation:

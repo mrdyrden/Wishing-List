@@ -5,3 +5,14 @@ class WishAssitantTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+# == Schema Information
+#
+# Table name: wish_assitants
+#
+#  id           :integer         not null, primary key
+#  wish_id      :integer         not null
+#  assistant_id :integer         not null
+#  created_at   :datetime        not null
+#  updated_at   :datetime        not null
+#
+

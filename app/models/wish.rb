@@ -11,3 +11,14 @@ class Wish < ActiveRecord::Base
   has_many :assistants, :through => :wish_assistants
 
 end
+# == Schema Information
+#
+# Table name: wishes
+#
+#  id         :integer         not null, primary key
+#  name       :string(255)     not null
+#  user_id    :integer         not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
